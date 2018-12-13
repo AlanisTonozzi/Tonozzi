@@ -5,6 +5,11 @@ const server = express()
 
 server.use(express.static(__dirname + '/src'))
 
+server.use(function(req, res, next) {
+    res.status(404).sendFile(__dirname + "/src/error.html");
+  });
+  
+
 server.listen(3000, () =>{
     console.log("Servidor rodando na porta 3000")
 
