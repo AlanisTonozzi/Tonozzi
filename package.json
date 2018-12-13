@@ -18,6 +18,10 @@
   "homepage": "https://github.com/AlanisTonozzi/Tonozzi#readme",
   "description": "",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1"
+  },
+  "devDependencies": {}
 }
