@@ -3,10 +3,10 @@ const express = require('express')
 
 const server = express()
 
-server.use(express.static(__dirname + '/src'))
+server.use(express.static(__dirname + '/dist'))
 
 server.use(function(req, res, next) {
-    res.status(404).sendFile(__dirname + "/src/error.html");
+    res.status(404).sendFile(__dirname + "/dist/error.html");
   });
   
 

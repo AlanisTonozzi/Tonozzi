@@ -4,7 +4,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "serve": "gulp build:watch",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   "homepage": "https://github.com/AlanisTonozzi/Tonozzi#readme",
   "description": "",
   "dependencies": {
+    "browser-sync": "^2.26.3",
     "express": "^4.16.4",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
