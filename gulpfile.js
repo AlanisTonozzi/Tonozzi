@@ -11,8 +11,9 @@ gulp.task('minify', () => {
 	.pipe(gulp.dest('dist'));
 });
 gulp.task("image", () =>{
-    gulp.src('client/templates/*.pug')
+    return gulp.src('client/templates/*.pug')
     .pipe(gulp.dest(''));
+})
 
 gulp.task('minify-css', () => {
     return gulp.src('./src/**/*.css')
@@ -30,13 +31,13 @@ gulp.task('serve', function () {
     gulp.watch("*.html").on("change", reload);
 });
 
-gulp.task("build", gulp.parallel(["minify", "minify-css","serve"]))
+gulp.task("build", gulp.parallel(["minify", "minify-css","serve"]));
 
 
 
 gulp.task("build:watch", () => {
     gulp.watch('./src/**/*.*', gulp.series(['build']))
-});
+})
 
 gulp.task("servidor", gulp.parallel(['build:watch', "serve"]));
 
@@ -45,4 +46,3 @@ gulp.task("servidor", gulp.parallel(['build:watch', "serve"]));
 
 
 
-// Criar uma tarefa que roda build toda vez que tiver mudança no código e também reiniciar o servidor e atualizar o navegador

@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-     <title>Tonozzi</title>
-     <link rel="stylesheet" type="text/css" href="./styles/theme.css">
-     <link rel="stylesheet" type="text/css" href="./styles/cssreset.css">
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-</head>
-<body class="body">
-    <header class="header"> 
-        <div class="container_titulo">  
-            <h1 class="titulo_Fonte"> Fale conosco</h1>
-         </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Tonozzi</title>
+    <link rel="stylesheet" type="text/css" href="./styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/cssreset.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="container_titulo">
+        <h1 class="titulo_Fonte">Fale conosco</h1>
+      </div>
     </header>
 
-    <div class="container"> 
-        <h2 class="h2">Crítica, sugestão ou elogio?</h2>
-         <p class="p_contato">Fale com a gente pelo formulário ou
-         <a class="contato_link" href="mailto:carlostonozzi@aol.com.br">carlostonozzi@aol.com.br</a></p> 
-        <div class="div_form">
-            <form class="form">
-                <label class="label_forms"> Nome (obrigatório) 
-                    <input class="campos" type="text" required>
-                </label>
-                <label class="label_forms"> Email (obrigatório)
-                    <input class="campos" type="email" required>
-                </label>
-                <label class="label_forms"> telefone com DDD
-                    <input class="campos"type="number" >
-                </label>
-                <label class="label_forms"> Mensagem (obrigatório)
-                    <textarea placeholder="Sua dúvida, sugestão ou elogio." class="campos" required></textarea>
-                </label>
+    <div class="container">
+      <h2 class="h2">Crítica, sugestão ou elogio?</h2>
+      <p class="p_contato">
+        Fale com a gente pelo formulário ou
+        <a class="contato_link" href="mailto:carlostonozzi@aol.com.br"
+          >carlostonozzi@aol.com.br</a
+        >
+      </p>
+      <div class="div_form">
+        <form class="form" method="POST" action="/novo-contato">
+          <label class="label_forms">
+            Nome (obrigatório)
+            <input class="campos" name="nome" type="text" required />
+          </label>
 
-                <button class="botao" type="submit"> ENVIAR </button>
-            </form>
-        </div> 
-            <div class="containerDoContainer">
-                <div class="container_telefones">       
-                    <p class="textoTelefones" id="telefonetexto"> <i> Se preferir, nossos telefones são:</i></p>
-                    <p class="textoTelefones"> Pessoa física: <a id="telenumber" href="tel:11953681806">(11) 95368-1806</a></p>
-                    <p class="textoTelefones">Pessoa jurídica: <a id="telenumber" href="tel:1126045434">(11) 2604-5434</a></p>
-                    <p class="textoTelefones">(segunda à sexta, das 8h às 19h)</p>
-                </div>
-            </div>    
+          <label class="label_forms">
+            Email (obrigatório)
+            <input class="campos" name="email" type="email" required />
+          </label>
+          <label class="label_forms">
+            telefone com DDD
+            <input class="campos" name="telefone" type="number" />
+          </label>
+          <label class="label_forms">
+            Mensagem (obrigatório)
+            <textarea
+              placeholder="Sua dúvida, sugestão ou elogio."
+              class="campos"
+              name="mensagem"
+              required
+            ></textarea>
+          </label>
+
+          <button class="botao" type="submit">ENVIAR</button>
+        </form>
+      </div>
+      <div class="containerDoContainer">
+        <div class="container_telefones">
+          <p class="textoTelefones" id="telefonetexto">
+            <i> Se preferir, nossos telefones são:</i>
+          </p>
+          <p class="textoTelefones">
+            Pessoa física:
+            <a id="telenumber" href="tel:11953681806">(11) 95368-1806</a>
+          </p>
+          <p class="textoTelefones">
+            Pessoa jurídica:
+            <a id="telenumber" href="tel:1126045434">(11) 2604-5434</a>
+          </p>
+          <p class="textoTelefones">(segunda à sexta, das 8h às 19h)</p>
+        </div>
+      </div>
     </div>
-    </body>
-    </html>
-        
+  </body>
+</html>

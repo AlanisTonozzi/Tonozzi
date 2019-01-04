@@ -20,11 +20,13 @@
   "homepage": "https://github.com/AlanisTonozzi/Tonozzi#readme",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "browser-sync": "^2.26.3",
     "express": "^4.16.4",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "nodemailer": "^4.7.0"
   },
   "devDependencies": {}
 }
