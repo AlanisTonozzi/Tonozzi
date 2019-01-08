@@ -1,48 +1,50 @@
 const gulp = require("gulp")
 const htmlmin = require("gulp-htmlmin")
-const cleanCSS = require('gulp-clean-css');
-const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
+const cleanCSS = require("gulp-clean-css")
+const clean = require("gulp-clean")
 
+// BUILD
 
-gulp.task('minify', () => {
-    return gulp.src('src/*.html')
-	.pipe(htmlmin({ collapseWhitespace: true }))
-	.pipe(gulp.dest('dist'));
-});
-gulp.task("image", () =>{
-    return gulp.src('client/templates/*.pug')
-    .pipe(gulp.dest(''));
+gulp.task("build:clean", () => {
+  return gulp.src("./dist", { read: false, allowEmpty: true }).pipe(clean())
 })
 
-gulp.task('minify-css', () => {
-    return gulp.src('./src/**/*.css')
-	.pipe(cleanCSS({compatibility: 'ie8'}))
-	.pipe(gulp.dest('dist'));
-});
-
-gulp.task('serve', function () {
-    browserSync.init({
-        server: {
-            baseDir: "./dist"
-        }
-    });
-
-    gulp.watch("*.html").on("change", reload);
-});
-
-gulp.task("build", gulp.parallel(["minify", "minify-css","serve"]));
-
-
-
-gulp.task("build:watch", () => {
-    gulp.watch('./src/**/*.*', gulp.series(['build']))
+gulp.task("build:html", () => {
+  return gulp
+    .src("src/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("dist"))
 })
 
-gulp.task("servidor", gulp.parallel(['build:watch', "serve"]));
+gulp.task("build:css", () => {
+  return gulp
+    .src("./src/**/*.css")
+    .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(gulp.dest("dist"))
+})
 
+gulp.task("build:assets:favicon", () => {
+  return gulp.src("./src/favicon.ico").pipe(gulp.dest("dist"))
+})
+gulp.task("build:assets:assets", () => {
+  return gulp.src("./src/assets/**/*").pipe(gulp.dest("dist/assets"))
+})
+gulp.task(
+  "build:assets",
+  gulp.parallel(["build:assets:favicon", "build:assets:assets"])
+)
 
+gulp.task(
+  "build",
+  gulp.series([
+    "build:clean",
+    gulp.parallel(["build:html", "build:css", "build:assets"])
+  ])
+)
 
+// SERVE
 
-
-
+gulp.task("serve", () => {
+  gulp.series(["build"])()
+  gulp.watch("./src/**/*", gulp.series(["build"]))
+})

@@ -29,6 +29,10 @@ server.post("/novo-contato", function(req, res) {
     .catch(() => res.status(500).send("Deu merda no envio do email"))
 })
 
+server.get("/index", function(req, res, next) {
+  res.sendFile(__dirname + "/dist/principal.html")
+})
+
 server.get("*", function(req, res, next) {
   res.status(404).sendFile(__dirname + "/dist/error.html")
 })
@@ -36,19 +40,3 @@ server.get("*", function(req, res, next) {
 server.listen(3000, () => {
   console.log("Servidor rodando na porta 3000")
 })
-
-/*const server = http.createServer((req,res)=> {
-    if(req.url == "/") { 
-        res.end("<h1> foi1 </h1>")
-
-    }
-    if(req.url =="/contato"){
-       
-    }
-    res.end("<h1> Sem respota para a URL</h1>")
-})
-
-server.listen(3000, "localhost", () => {
-    console.log("funcionou")
-
-})*/
