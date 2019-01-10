@@ -3,6 +3,8 @@ const express = require("express")
 const { sendEmail } = require("./sendEmail.js")
 const bodyParser = require("body-parser")
 
+const PORT = process.env.PORT !== undefined ? parseInt(process.env.PORT) : 3000
+
 const server = express()
 
 server.use((req, res, next) => {
@@ -37,6 +39,6 @@ server.get("*", function(req, res, next) {
   res.status(404).sendFile(__dirname + "/dist/error.html")
 })
 
-server.listen(3000, () => {
-  console.log("Servidor rodando na porta 3000")
+server.listen(PORT, () => {
+  console.log("Servidor rodando na porta " + PORT)
 })
