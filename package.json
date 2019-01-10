@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "serve": "concurrently \"gulp serve\" \"nodemon server.js\"",
-    "build": "gulp build"
+    "build": "gulp build",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
