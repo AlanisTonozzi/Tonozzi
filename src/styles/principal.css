@@ -1,9 +1,14 @@
+.body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("/assets/wll.jpg");
+  background-position: 28% 74%;
+}
 .header {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: center;
-  margin-bottom: 6%;
+  background-color: #f3f2f1d1;
 }
 .logo_header {
   max-width: 35%;
@@ -33,7 +38,7 @@ svg {
 
 .link_telefone {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
 }
 .link_telefone:hover {
@@ -43,4 +48,57 @@ svg {
 }
 .wallpaper {
   width: 100%;
+}
+.nossos_serviços {
+  margin-left: 5%;
+  font-size: 2rem;
+  text-align: right;
+  color: #000000ba;
+}
+
+.container_titulo {
+  width: 25%;
+  border-bottom: 5px solid #ffad5b;
+  position: absolute;
+  margin-top: 7%;
+}
+#svg_srvicos {
+  width: 30%;
+  height: 40%;
+  fill: #000000ba;
+}
+#container_imagens {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  margin-top: 12%;
+}
+#servicos_lista {
+  display: flex;
+  flex-direction: column;
+}
+.logings {
+  width: 30%;
+  height: 40%;
+}
+#falec {
+  text-decoration: none;
+  font-size: 24px;
+  color: #fff;
+  background: #ff7f00;
+  padding: 14px;
+  border-radius: 5px;
+}
+#falec:hover {
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffad5b;
+  background: #efeeee;
+  padding: 14px;
+  border-radius: 5px;
+}
+.footer {
+  display: flex;
+  background-color: #ffad5b;
+  height: 184px;
 }

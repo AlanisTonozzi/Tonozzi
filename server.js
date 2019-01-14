@@ -31,8 +31,8 @@ server.post("/novo-contato", function(req, res) {
     .catch(() => res.status(500).send("Deu merda no envio do email"))
 })
 
-server.get("/index", function(req, res, next) {
-  res.sendFile(__dirname + "/dist/principal.html")
+server.get("/faleconosco", function(req, res, next) {
+  res.sendFile(__dirname + "/dist/faleconosco.html")
 })
 
 server.get("*", function(req, res, next) {
