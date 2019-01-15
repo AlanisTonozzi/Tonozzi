@@ -2,23 +2,25 @@
   font-family: "Open Sans", sans-serif;
   background-image: url("/assets/wll.jpg");
   background-position: 28% 74%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .header {
-  width: 100%;
-  height: 20%;
-  display: flex;
-  justify-content: center;
+  /*width: 100%;*/
+  display: inline;
   background-color: #f3f2f1d1;
 }
 .logo_header {
-  max-width: 35%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
   height: auto;
-  align-self: center;
+  display: block;
 }
 .barra {
   background-color: #ffad5b;
-  min-height: 6%;
-  display: flex;
+
   justify-content: center;
 }
 ul {
@@ -59,19 +61,17 @@ svg {
 .container_titulo {
   width: 25%;
   border-bottom: 5px solid #ffad5b;
-  position: absolute;
+
   margin-top: 7%;
 }
 #svg_srvicos {
   width: 30%;
-  height: 40%;
+
   fill: #000000ba;
 }
 #container_imagens {
   display: flex;
   flex-wrap: wrap;
-  height: 50%;
-  margin-top: 12%;
 }
 #servicos_lista {
   display: flex;
@@ -101,4 +101,39 @@ svg {
   display: flex;
   background-color: #ffad5b;
   height: 184px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.section {
+  flex: 1;
+}
+.descricao {
+  font-weight: 600;
+  color: #3e3d3d;
+}
+.logo_footer {
+  width: 227px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#telfooter {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+.fb {
+  order: 3;
+}
+.melhorparte {
+  color: white;
+  order: 4;
+  align-self: flex-end;
+}
+#perfil {
+  color: #ff7f00;
+  font-weight: bolder;
 }
