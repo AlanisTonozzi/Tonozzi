@@ -19,10 +19,16 @@
   .logo_header {
     max-width: 400px;
   }
+  .link_telefone {
+    font-size: 20px;
+  }
 }
 @media (min-width: 530px) {
   .container_titulo {
     width: 279px;
     margin-top: 90px;
+  }
+  .link_telefone {
+    font-size: 17px;
   }
 }

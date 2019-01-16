@@ -33,6 +33,7 @@ li {
   align-items: center;
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 svg {
   fill: white;
@@ -41,14 +42,10 @@ svg {
 
 .link_telefone {
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
   color: white;
 }
-.link_telefone:hover {
-  text-decoration: none;
-  font-size: 17px;
-  color: #6d3801;
-}
+
 .wallpaper {
   width: 100%;
 }
@@ -60,7 +57,7 @@ svg {
 }
 
 .container_titulo {
-  width: 75%;
+  width: 190px;
   border-bottom: 5px solid #ffad5b;
 
   margin-top: 20%;
@@ -104,12 +101,11 @@ svg {
   border-radius: 5px;
 }
 .footer {
-  display: flex;
   background-color: #ffad5b;
-  height: 184px;
-  justify-content: center;
+  height: 67px;
+
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 .section {
   flex: 1;
@@ -119,27 +115,26 @@ svg {
   color: #3e3d3d;
 }
 .logo_footer {
-  width: 227px;
-  height: 72px;
+  width: 133px;
+  height: 33px;
   display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 7px;
 }
-#telfooter {
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
-}
+
 .fb {
   order: 3;
 }
 .melhorparte {
   color: white;
   order: 4;
-  align-self: flex-end;
+
+  font-size: 13px;
 }
 #perfil {
   color: #ff7f00;
   font-weight: bolder;
+}
+.f {
+  display: flex;
+  justify-content: space-between;
 }
