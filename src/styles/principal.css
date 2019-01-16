@@ -7,14 +7,13 @@
   flex-direction: column;
 }
 .header {
-  /*width: 100%;*/
   display: inline;
   background-color: #f3f2f1d1;
 }
 .logo_header {
   margin: 0 auto;
   width: 100%;
-  max-width: 300px;
+  max-width: 270px;
   height: auto;
   display: block;
 }
@@ -28,24 +27,26 @@ ul {
   justify-content: space-around;
   width: 100%;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 li {
   align-items: center;
   display: flex;
+  width: 100%;
 }
 svg {
   fill: white;
-  width: 10%;
+  width: 7%;
 }
 
 .link_telefone {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 17px;
   color: white;
 }
 .link_telefone:hover {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 17px;
   color: #6d3801;
 }
 .wallpaper {
@@ -53,19 +54,19 @@ svg {
 }
 .nossos_serviços {
   margin-left: 5%;
-  font-size: 2rem;
+  font-size: 23px;
   text-align: right;
   color: #000000ba;
 }
 
 .container_titulo {
-  width: 25%;
+  width: 75%;
   border-bottom: 5px solid #ffad5b;
 
-  margin-top: 7%;
+  margin-top: 20%;
 }
 #svg_srvicos {
-  width: 30%;
+  width: 67px;
 
   fill: #000000ba;
 }
@@ -76,6 +77,8 @@ svg {
 #servicos_lista {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 18px;
 }
 .logings {
   width: 30%;
@@ -88,6 +91,9 @@ svg {
   background: #ff7f00;
   padding: 14px;
   border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #falec:hover {
   text-decoration: none;

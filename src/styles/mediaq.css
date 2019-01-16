@@ -1,0 +1,28 @@
+@media (min-width: 400) {
+}
+
+@media (min-width: 750px) {
+  .logo_header {
+    max-width: 330px;
+  }
+  svg {
+    width: 40px;
+  }
+  ul {
+    flex-wrap: nowrap;
+  }
+  li {
+    width: initial;
+  }
+}
+@media (min-width: 1000px) {
+  .logo_header {
+    max-width: 400px;
+  }
+}
+@media (min-width: 530px) {
+  .container_titulo {
+    width: 279px;
+    margin-top: 90px;
+  }
+}
