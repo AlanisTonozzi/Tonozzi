@@ -14,11 +14,7 @@
     />
   </head>
   <body class="body">
-    <header class="header">
-      <div class="container_titulo">
-        <h1 class="titulo_Fonte">Fale conosco</h1>
-      </div>
-    </header>
+    <header class="header"><h1 class="titulo_Fonte">Fale conosco</h1></header>
 
     <div class="container">
       <h2 class="h2">Crítica, sugestão ou elogio?</h2>
@@ -28,50 +24,56 @@
           >carlostonozzi@aol.com.br</a
         >
       </p>
-      <div class="container">
-        <form class="form" method="POST" action="/novo-contato">
-          <label class="label_forms">
-            Nome (obrigatório)
-            <input class="campos" name="nome" type="text" required />
-          </label>
+    </div>
+    <div class="form_container">
+      <form class="form" method="POST" action="/novo-contato">
+        <label class="label_forms">
+          Nome (obrigatório)<br />
+          <input class="campos" name="nome" type="text" required /> </label
+        ><br />
 
-          <label class="label_forms">
-            Email (obrigatório)
-            <input class="campos" name="email" type="email" required />
-          </label>
-          <label class="label_forms">
-            telefone com DDD
-            <input class="campos" name="telefone" type="number" />
-          </label>
-          <label class="label_forms">
-            Mensagem (obrigatório)
-            <textarea
-              placeholder="Sua dúvida, sugestão ou elogio."
-              class="campos"
-              name="mensagem"
-              required
-            ></textarea>
-          </label>
+        <label class="label_forms">
+          Email (obrigatório) <br /><input
+            class="campos"
+            name="email"
+            type="email"
+            required
+          /> </label
+        ><br />
+        <label class="label_forms">
+          telefone com DDD <br /><input
+            class="campos"
+            name="telefone"
+            type="number"
+          /> </label
+        ><br />
+        <label class="label_forms">
+          Mensagem (obrigatório)<br />
+          <textarea
+            placeholder="Sua dúvida, sugestão ou elogio."
+            class="campos"
+            name="mensagem"
+            required
+          ></textarea>
+        </label>
 
-          <button class="botao" type="submit">ENVIAR</button>
-        </form>
-      </div>
-      <div class="containerDoContainer">
-        <div class="container_telefones">
-          <p class="textoTelefones" id="telefonetexto">
-            <i> Se preferir, nossos telefones são:</i>
-          </p>
-          <p class="textoTelefones">
-            Pessoa física:
-            <a id="telenumber" href="tel:11953681806">(11) 95368-1806</a>
-          </p>
-          <p class="textoTelefones">
-            Pessoa jurídica:
-            <a id="telenumber" href="tel:1126045434">(11) 2604-5434</a>
-          </p>
-          <p class="textoTelefones">(segunda à sexta, das 8h às 19h)</p>
-        </div>
-      </div>
+        <button class="botao" type="submit">ENVIAR</button>
+      </form>
+    </div>
+
+    <div class="container_telefones">
+      <p class="textoTelefones" id="telefonetexto">
+        <i> Se preferir, nossos telefones são:</i>
+      </p>
+      <p class="textoTelefones">
+        Pessoa física:
+        <a id="telenumber" href="tel:11953681806">(11) 95368-1806</a>
+      </p>
+      <p class="textoTelefones">
+        Pessoa jurídica:
+        <a id="telenumber" href="tel:1126045434">(11) 2604-5434</a>
+      </p>
+      <p class="textoTelefones">(segunda à sexta, das 8h às 19h)</p>
     </div>
   </body>
 </html>

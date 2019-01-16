@@ -1,62 +1,64 @@
 .body {
   font-family: open sans;
+  background-image: url("/assets/wll.jpg");
+  background-position: 28% 74%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
   background-color: #f3994b;
   width: 100%;
-  height: 200px;
-  position: relative;
+  height: auto;
 }
+
 .titulo_Fonte {
   color: white;
-  font-size: 60px;
   font-weight: 900;
-  border-left: 50px;
-  margin-right: auto;
-  top: 0%;
-  left: 50%;
-  margin-left: -420px;
-  position: absolute;
-  width: 430spx;
-  margin-top: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  font-size: 2rem;
 }
+
 .h2 {
   font-weight: 700;
   color: #000000ba;
-  margin-left: 529px;
-  margin-top: 50px;
-  font-size: 30px;
+  font-size: 23px;
 }
 .p_contato {
-  margin-left: 529px;
   color: #000000ba;
   margin-top: 12px;
-  font-size: 25px;
-  margin-bottom: 60px;
+  font-size: 20px;
+  text-align: center;
 }
 .contato_link {
   color: #f3994b;
 }
 .form {
-  width: 60%;
-  align-items: center;
-  margin-left: 530px;
+  min-width: 20%;
 }
 .label_forms {
-  display: block;
-  width: 100%;
   font-size: 17px;
   color: #000000ba;
+  width: 100%;
 }
 .campos {
-  display: block;
-  width: 60%;
   padding: 15px;
   border: 2px solid #666;
   border-radius: 5px;
   margin-top: 14px;
   margin-bottom: 14px;
+  width: 100%;
 }
 
 .botao {
@@ -82,17 +84,55 @@
   font-style: italic;
 }
 .container_telefones {
-  left: 50%;
-  margin-left: -420px;
-  position: absolute;
-  width: 300px;
-  margin-top: 51px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
 }
 
 .containerDoContainer {
-  position: relative;
   width: 100%;
 }
 #telenumber {
   color: #000000ba;
 }
+.form_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+@media (min-width: 450px) {
+  .titulo_Fonte {
+    font-size: 2.5rem;
+  }
+  .p_contato {
+    font-size: 20px;
+  }
+  .form {
+    min-width: 60%
+}
+
+@media (min-width: 750px) {
+  .titulo_Fonte {
+    font-size: 3.5rem;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .p_contato {
+    font-size: 24px;
+  }
+  .form {
+    min-width: 46%
+}
+@media (min-width: 1000px) {
+  .h2 {
+    font-size: 33px;
+  }
+  .p_contato {
+    font-size: 23px;
+  }
+  .form {
+    min-width: 34%;
+}
+
