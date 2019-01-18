@@ -1,0 +1,51 @@
+.body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("/assets/wll.jpg");
+  background-position: 28% 74%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: inline;
+  background-color: #f3f2f1d1;
+}
+.logo_header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 270px;
+  height: auto;
+  display: block;
+}
+.barra {
+  background-color: #ffad5b;
+
+  justify-content: center;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+li {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+svg {
+  fill: white;
+  width: 7%;
+}
+
+.link_telefone {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.wallpaper {
+  width: 100%;
+}
